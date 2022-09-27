@@ -10,4 +10,13 @@ class CookBook
     @recipes << recipe
     @recipes.flatten!
   end
+
+  def date
+    time = Time.new
+    time = time.month.to_s + "-" + time.day.to_s + "-" + time.year.to_s
+    puts time
+  end
+  def highest_calorie_meal
+    @recipe_calories = Hash.new(0)
+  end
 end
